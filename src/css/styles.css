@@ -1,3 +1,63 @@
-.color {
-  color: brown;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+.container {
+  display: flex; /* Make container a flexbox */
+  flex-wrap: wrap; /* Allow content to wrap if needed */
+  width: 80%; /* Adjust width as needed */
+  /* margin: 0 auto; Center the container horizontally */
+}
+a {
+  transition: all 1000ms ease;
+}
+
+nav,
+.nav_links {
+  display: flex;
+}
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 12vh;
+}
+.nav_links {
+  list-style: none;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: black;
+}
+a:hover {
+  color: grey;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.profile-info,
+.profile-picture {
+  flex: 1; /* Make both sections equally sized */
+  padding: 20px;
+}
+
+.profile-info {
+  text-align: justify; /* Justify text alignment for better readability */
+}
+
+.profile-picture img {
+  width: 100%; /* Display image at full width of its container */
+  border-radius: 50%; /* Set a circular image shape */
 }

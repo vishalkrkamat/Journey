@@ -4,21 +4,28 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   mode: "development",
   entry: { script: "./src/Js/main.js" },
-  devtool: "inline-source-map",
-  devServer: {
-    static: "./dist",
+  output: {
+    path: path.resolve(__dirname, "dist"), // Output directory for bundled files
+    filename: "[name].bundle.js",
+    clean: true,
+    // publicPath: "/",
   },
+  devtool: "inline-source-map",
+
+  devServer: {
+    // static: "./dist",
+    static: [
+      path.join(__dirname, "dist"), // Serve HTML from 'src' directory
+      "./dist/index.html", // Still serve files from 'dist' if needed for assets
+    ],
+  },
+
   plugins: [
     new HtmlWebpackPlugin({
+      title: "Journey",
       template: "./src/index.html",
     }),
   ],
-  output: {
-    filename: "[name].bundle.js",
-    clean: true,
-    path: path.resolve(__dirname, "dist"), // Output directory for bundled files
-    publicPath: "/",
-  },
   module: {
     rules: [
       {
@@ -30,6 +37,10 @@ module.exports = {
         use: {
           loader: "html-loader",
         },
+      },
+      {
+        test: /\.(js)$/,
+        use: "babel-loader",
       },
       {
         test: /\.(png|jpg|gif|svg)$/, // Rule for image files
