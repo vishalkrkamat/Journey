@@ -1,0 +1,11 @@
+/* Styles for mobile devices (screens less than 768px wide) */
+@media screen and (max-width: 768px) {
+  .desk_nav {
+    flex-direction: column; /* Stack navigation links vertically */
+    align-items: center; /* Center links horizontally when stacked */
+  }
+
+  .nav_links li {
+    margin-bottom: 1rem; /* Add space between links */
+  }
+}
