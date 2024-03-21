@@ -1,20 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-* {
+/* * {
   margin: 0;
   padding: 0;
-}
+} */
 html {
   scroll-behavior: smooth;
 }
 body {
   font-family: "Open Sans", sans-serif;
+  background-color: #70ee9c;
 }
-.container {
-  display: flex; /* Make container a flexbox */
-  flex-wrap: wrap; /* Allow content to wrap if needed */
-  width: 80%; /* Adjust width as needed */
-  /* margin: 0 auto; Center the container horizontally */
-}
+
 a {
   transition: all 1000ms ease;
 }
@@ -47,17 +43,28 @@ a:hover {
   font-size: 1.5rem;
 }
 
-.profile-info,
-.profile-picture {
-  flex: 1; /* Make both sections equally sized */
-  padding: 20px;
+/* Profile info section css */
+
+section {
+  height: 76vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
 }
 
-.profile-info {
-  text-align: justify; /* Justify text alignment for better readability */
+.profile_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  min-height: 60vh; /* Adjust for header height */
 }
 
-.profile-picture img {
+.text_p1 {
+  font-size: 2.4rem;
+}
+
+#pro_image img {
   width: 100%; /* Display image at full width of its container */
   border-radius: 50%; /* Set a circular image shape */
 }
