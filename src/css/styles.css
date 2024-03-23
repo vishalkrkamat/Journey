@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-/* * {
+* {
   margin: 0;
   padding: 0;
-} */
+}
 html {
   scroll-behavior: smooth;
 }
@@ -22,7 +22,7 @@ nav,
 nav {
   justify-content: space-around;
   align-items: center;
-  height: 12vh;
+  height: 16vh;
 }
 .nav_links {
   list-style: none;
@@ -46,7 +46,8 @@ a:hover {
 /* Profile info section css */
 
 section {
-  height: 76vh;
+  padding-top: 4vh;
+  height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -55,16 +56,41 @@ section {
 .profile_container {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 5rem;
-  min-height: 60vh; /* Adjust for header height */
+  height: 80vh;
 }
 
 .text_p1 {
   font-size: 2.4rem;
 }
 
-#pro_image img {
-  width: 100%; /* Display image at full width of its container */
-  border-radius: 50%; /* Set a circular image shape */
+.text_cont {
+  align-self: center;
+}
+.profile-picture {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+/* Experience Style*/
+
+.title_exp {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.experience_container {
+  display: flex;
+  justify-content: center;
+}
+.details_experience {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.details_experience article img {
+  height: 150px;
+  width: auto; /* Allow the width to adjust according to height */
 }

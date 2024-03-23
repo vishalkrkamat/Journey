@@ -43,7 +43,7 @@ module.exports = {
         use: "babel-loader",
       },
       {
-        test: /\.(png|jpg|gif|svg)$/, // Rule for image files
+        test: /\.(png|jpg|gif|svg|PNG)$/, // Rule for image files
         use: [
           {
             loader: "file-loader",
