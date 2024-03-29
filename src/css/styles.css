@@ -8,9 +8,23 @@ html {
 }
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: #70ee9c;
+  background-color: #4ccd99;
+  background-image: linear-gradient(
+    to right top,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
 }
-
 a {
   transition: all 1000ms ease;
 }
@@ -113,4 +127,54 @@ article {
 article img {
   height: 6rem;
   width: auto; /* Allow the width to adjust according to height */
+}
+
+/* Project Section */
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+  height: 96vh;
+  margin: 0 10rem;
+}
+#projects > h2 {
+  align-self: center;
+}
+.pro_container {
+  width: 100%;
+  margin-top: 24vh;
+  /* overflow-x: auto; */
+  white-space: nowrap; /* Prevent line breaks */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center the content horizontally */
+  position: relative;
+}
+
+.project {
+  display: inline-block;
+  width: 300px; /* Adjust width of each project card */
+  margin-right: 20px; /* Adjust spacing between project cards */
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 20px;
+}
+.project h3 {
+  margin-top: 0;
+}
+.project p {
+  margin-bottom: 10px;
+}
+.project a {
+  display: block;
+  text-decoration: none;
+  background-color: darkgreen;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+.project a:hover {
+  background-color: #006400;
 }
